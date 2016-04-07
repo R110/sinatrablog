@@ -1,0 +1,19 @@
+<% @posts.each_with_index do |post, ind| %>
+
+<h1> <a href="post_details/<%=ind%>"> <%= post.title %> </a> </h1>
+<% end %>
+
+<form action="/latest" method="post">
+  <button type="submit">See Latest Posts First </button>
+</form>
+
+<br> <h4>Sort Posts By Category</h4>
+<form method="POST" action="/sort_posts">
+March<input type="radio" name="post_category" value="March">
+April<input type="radio" name="post_category" value="April">
+May<input type="radio" name="post_category" value="May">
+<button> Submit </button>
+</form>
+<hr>
+
+<h4><a href="/new_post_form" >Create New Post</a></h4>
