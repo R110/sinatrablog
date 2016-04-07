@@ -6,8 +6,8 @@ require_relative "../lib/post.rb"
 describe Blog do
   before(:each) do
     @blog = Blog.new
-    @post1 = Post.new("1","11")
-    @new_post = Post.new("13","3")
+    @post1 = Post.new("1","11","John G", "March")
+    @new_post = Post.new("13","3", "John G", "May")
     @blog.add_post(@post1)
     @blog.add_post(@new_post)
   end
